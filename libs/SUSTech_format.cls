@@ -10,7 +10,7 @@
 %% Global background setting
 % \usebackgroundtemplate{\includegraphics[width=1.7\paperwidth]{libs/LOGO transparent.png}}
 
-\logo{\includegraphics[scale=0.2]{libs/LOGO3_small.png}\hspace{9.3cm} \vspace{-0.2cm}}
+\logo{\includegraphics[scale=0.2]{libs/LOGO3_small.png}\hspace{9.3cm} \vspace{-1cm}}
 
 %% Packages Used
 \RequirePackage[utf8]{inputenc}
@@ -174,9 +174,13 @@
 }
 
 % create a command for UFC
-\newcommand{\SUSTech}{
+\newcommand{\SUSTechEN}{
   \bfseries
   \normalsize{Southern University of Science and Technology}
+}
+\newcommand{\SUSTech}{
+  \bfseries
+  \normalsize{南方科技大学}
 }
 
 % department command

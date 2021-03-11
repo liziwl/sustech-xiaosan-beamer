@@ -12,29 +12,17 @@
 % Inserting the references file
 \bibliography{references.bib}
 
-\setCJKfamilyfont{font01}{Noto Serif CJK SC}
-\newcommand{\fonta}{\CJKfamily{font01}}
-
+\usetheme{Xiaoshan}
+\usefonttheme{serif,professionalfonts}
 
 % Title
-\title[如何使用 \LaTeX]{\huge \textbf{\fonta 如何使用 \LaTeX}}
+\title[如何使用 \LaTeX]{\huge \textbf{ 如何使用 \LaTeX}}
 % Subtitle
 % \subtitle{Subtitle of the Presentation}
 % Author of the presentation
-\author{李子强@LUG}
-% Institute's Name
-\institute[SUSTech]{
-    % email for contact
-    \normalsize{\email{lizq2019@mail.sustech.edu.cn}}
-    \newline
-    % Department Name
-    % \department{Name of the Department}
-    % \newline
-    % university name
-    \SUSTech
-}
-% date of the presentation
-\date{2021年4月}
+\author{李子强 \enskip 计算机系}
+\institute{\raggedleft 南方科技大学图书馆}
+\date{2021年3月}
 
 
 
@@ -68,6 +56,10 @@
         \tableofcontents
     \end{multicols}
 \end{frame}
+
+\begin{frame}{中文测试}
+    中文测试\end{frame}
+
 
 %% ---------------------------------------------------------------------------
 % This presentation is separated by sections and subsections
@@ -120,9 +112,6 @@
 \begin{frame}{Different boxs}
     \successbox{Text in success box}
     
-    中文小测试
-    {\fonta 中文小测试}
-
     \pause
 
     \alertbox{Text in alert box}
