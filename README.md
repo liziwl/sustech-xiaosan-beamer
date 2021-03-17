@@ -1,11 +1,40 @@
-# SUSTech Slide Template for Presentation
+# SUSTech Slide Template 萧山汉风主题
 
-Here is the presentation template based on LateX developed by Tong YUAN, in this `README.md` file, severial instructions abput how to apply this template will be demostrated.
+## 编译
 
-## Directly Apply this template to your Report and Presentation
+* Makefile
+  * xelatex
+  * biber(biblatex)
+  * xelatex
+  * xelatex
 
-To be finished
+[全部预览（点此）](./main.pdf)
 
-## Modify some details based on your own sense of aesthetic
+## 部分预览
 
-To be finished
+<p align="center">
+  <img src="preview/main-01.png" width=75%>
+</p>
+
+<p align="center">
+  <img src="preview/main-04.png" width=75%>
+</p>
+
+
+<p align="center">
+  <img src="preview/main-05.png" width=75%>
+</p>
+
+
+<p align="center">
+  <img src="preview/main-14.png" width=75%>
+</p>
+
+
+<p align="center">
+  <img src="preview/main-15.png" width=75%>
+</p>
+
+<p align="center">
+  <img src="preview/main-16.png" width=75%>
+</p>
