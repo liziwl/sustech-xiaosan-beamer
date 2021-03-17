@@ -32,3 +32,47 @@
 % Package to use multicols
 \usepackage{multicol}
 \usepackage{minted}
+
+\usepackage{hyperref}
+\newcommand{\email}[1]{
+    \texttt{
+      \href{mailto:#1}{#1}
+    }
+}
+
+% Beamer settings
+% \metroset{progressbar=none}
+\setbeamerfont{title}{size=\huge, series=\bfseries}
+\setbeamerfont*{subtitle}{size=\large, shape=\itshape}
+\setbeamerfont{section title}{size=\Large, series=\bfseries}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{caption}{size=\footnotesize, series=\bfseries}
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamerfont{alerted text}{series=\bfseries}
+\addtobeamertemplate{institute}{\raggedleft}{}
+\setbeamertemplate{title}{%
+  \raggedleft
+  \linespread{1.0}%
+  \inserttitle
+  \hspace*{1.2cm}\par
+  \vspace*{0.5em}}
+\setbeamertemplate{subtitle}{%
+  \raggedleft
+  \insertsubtitle
+  \hspace*{1.2cm}\par
+  \vspace*{0.5em}}
+\setbeamertemplate{title page}{%
+  \begin{minipage}[b]{\textwidth}
+    \usebeamertemplate*{title graphic}\vfill
+    \usebeamertemplate*{title}
+    \usebeamertemplate*{subtitle}
+    \usebeamertemplate*{title separator}
+    \usebeamertemplate*{author}
+    \usebeamertemplate*{date}
+    \usebeamertemplate*{institute}
+    \vfill
+  \end{minipage}}
+\setbeamertemplate{frame numbering}{\zhnumber[style=Financial]{\insertframenumber}}
+\setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
+\setbeamertemplate{caption}{\parbox{\textwidth}{\centering\insertcaption}\par}
+\setbeamertemplate{bibliography item}[text]

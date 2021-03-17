@@ -5,12 +5,11 @@
 %%    e-mail: maumneto@ufc.br                                                    %%
 %%    linktree: https://linktr.ee/maumneto                                       %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{libs/SUSTech_format}
-\usepackage{ctex}
+\documentclass[compress, 10pt]{ctexbeamer}
 % Inserting the preamble file with the packages
 \input{libs/preamble.tex}
 % Inserting the references file
-\bibliography{references.bib}
+\addbibresource{references.bib}
 
 \usetheme{Xiaoshan}
 \usefonttheme{serif,professionalfonts}
@@ -18,13 +17,13 @@
 % Title
 \title[如何使用 \LaTeX]{\huge \textbf{ 如何使用 \LaTeX}}
 % Subtitle
-% \subtitle{Subtitle of the Presentation}
+\subtitle{一些例子}
 % Author of the presentation
 \author{李子强 \enskip 计算机系}
 \institute{\raggedleft 南方科技大学图书馆}
 \date{2021年3月}
 
-
+\logo{\includegraphics[scale=0.2]{libs/LOGO3_small.png}\hspace{9.3cm} \vspace{-1cm}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -36,87 +35,64 @@
 
 %% ---------------------------------------------------------------------------
 % First frame (with tile, subtitle, ...)
-% \begin{frame}{}
-%     %% Putting the background image in the frames
-%     \usebackgroundtemplate{\includegraphics[width=1.7\paperwidth]{libs/LOGO transparent.png}}
-%     \maketitle
-% \end{frame}
 
-{
+{%
     \usebackgroundtemplate{\includegraphics[width=1.7\paperwidth]{libs/LOGO transparent.png}}
     \begin{frame}
     \maketitle
-    \end{frame}
+    \end{frame}%
 }
 
 %% ---------------------------------------------------------------------------
 % Second frame
 
 \begin{frame}{中文测试}
-    中文测试\end{frame}
+    中文测试
+
+    \emph{强调文本}
+
+    \alert{内容永远比格式重要！}
+
+\end{frame}
 
 
-%% ---------------------------------------------------------------------------
-% This presentation is separated by sections and subsections
-\section{Basic componments}
+% %% ---------------------------------------------------------------------------
+% % This presentation is separated by sections and subsections
+\section{第一部分}
 
-\begin{frame}{Lists}
+\begin{frame}{《新青年》发刊词}
     % itemize
-    Lets try to list some items
-    \begin{itemize}
-        \item Here is an item
-        \item Here is an item
-        \item Here is an item
-    \end{itemize}
-
-    \vspace{0.4cm} % vertical space
-    
-    % enumeration
-    Lets try another style
+    \emph{敬告青年}
     \begin{enumerate}
-        \item Here is an item
-        \item Here is an item
-        \item Here is an item
+        \item 自主的而非奴隶的
+        \item 进步的而非保守的
+        \item 进取的而非退隐的
+        \item 世界的而非锁国的
+        \item 实利的而非虚文的
+        \item 科学的而非想象的
     \end{enumerate}
 
-    \vspace{0.2cm}
-
-    \example{Example is in this color} \emph{Enphisis is in this color}
 \end{frame}
 
-%% ---------------------------------------------------------------------------
-\subsection{Blocks and boxs}
-\begin{frame}{Blocks}
+% %% ---------------------------------------------------------------------------
+\subsection{分块}
+\begin{frame}{分块}
     % Blocks styles
-    \begin{block}{Block I}
-        Text in the block.
+    \begin{block}{分块 I}
+        Text in the 分块.
     \end{block}
 
-    \begin{alertblock}{Block II}
-        Text in the alert block.
+    \begin{alertblock}{分块 II}
+        Text in the alert 分块.
     \end{alertblock}
 
-    \begin{exampleblock}{Block III}
-        Text in the example block.
-    \end{exampleblock}   
+    \begin{exampleblock}{分块 III}
+        Text in the example 分块.
+    \end{exampleblock}
 \end{frame}
 
-%% ---------------------------------------------------------------------------
 
-
-\begin{frame}{Different boxs}
-    \successbox{Text in success box}
-    
-    \pause
-
-    \alertbox{Text in alert box}
-
-    \pause
-
-    \simplebox{Text in simple box}
-\end{frame}
-
-%% ---------------------------------------------------------------------------
+% %% ---------------------------------------------------------------------------
 \subsection{Express programs}
 \begin{frame}{Insert Algorithm}
     \begin{algorithm}[H]
@@ -139,7 +115,7 @@
     \end{algorithm}
 \end{frame}
 
-%% ---------------------------------------------------------------------------
+% %% ---------------------------------------------------------------------------
 
 \begin{frame}{Insert code}
     \inputminted[
@@ -176,38 +152,44 @@
 %% ---------------------------------------------------------------------------
 % This frame show an example to insert figures
 \section{Images}
-\begin{frame}{Section III - Figures}
+\begin{frame}{Section III - 图片}
     \begin{figure}
         \centering
         \caption{SUSTech LOGO.}
         \includegraphics[scale=0.3]{libs/LOGO.png}
-        \source{SUSTech LOGO}
         \label{fig:ufc_emblem}
     \end{figure}
 \end{frame}
 
 %% ---------------------------------------------------------------------------
-% Reference frames
-\begin{frame}[allowframebreaks]
-    \frametitle{References}
-    \printbibliography
+\section{测试引用}
+\begin{frame}{引用}
+    引用爱因斯坦\cite{einstein}。
+    
+    “真理只有一个，而究竟谁发现了真理，不依靠主观的夸张，而依靠客观的实践。” -- 毛泽东\cite{毛泽东1949新民主主义论}。
 \end{frame}
 
 %% ---------------------------------------------------------------------------
-% Final frame
+% Reference frames
+\begin{frame}[allowframebreaks]{References}
+    % \frametitle{References}
+    \printbibliography
+\end{frame}
+
+% %% ---------------------------------------------------------------------------
+% % Final frame
 
 {
     \usebackgroundtemplate{\includegraphics[width=1.7\paperwidth]{libs/LOGO transparent.png}}
-    \begin{frame}{}
+    \begin{frame}
         \centering
-        \huge{\textbf{\example{Thanks!}}}
-        
+        {\Huge \bfseries \emph{Thanks}}
         \vspace{1cm}
-        
-        \Large{\textbf{Contact:}}
-        \newline
-        \vspace*{0.5cm}
-        \large{\email{Cnatact info}}
+
+        {\Large \bfseries Contact:}
+
+        \vspace{0.5cm}
+        {\large \bfseries \email{Cnatact info}}
     \end{frame}
 }
 
